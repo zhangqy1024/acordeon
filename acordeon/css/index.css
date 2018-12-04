@@ -1,0 +1,120 @@
+/*************** main style ***************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #2c3e50;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color :#ddd;
+}
+li{
+    list-style: none;
+}
+/************ outside container ***********/
+.content-acordeon{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 400px; 
+    overflow: hidden;
+    transition:all .4s ease-in-out;
+}
+.content-acordeon p{
+    display: inline-block;
+    margin-left:8px;
+}
+.content-acordeon img{
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left:8px;
+}
+/************** acordeon *****************/
+.acordeon-head{
+    background: #4D5258;
+    padding:10px;
+    color: #ddd;
+}
+.acordeon-head:hover{
+    cursor: pointer;
+}
+.acordeon-body:hover{
+    cursor: pointer;
+}
+.acordeon-body{
+    background: #35383D;
+    overflow: hidden; 
+    display:none;
+    transition: all .4s ease-in-out;
+    /*height: 0;*/
+}
+.acordeon-body div ul li:nth-child(3),.acordeon-body div ul li:nth-child(4){
+    margin:10px 0 10px 10px;
+}
+.acordeon-body div ul li:nth-child(3) img,.acordeon-body div ul li:nth-child(4) img{
+    margin-left:40px;
+}
+.acordeon-body div ul li:nth-child(3) a span,.acordeon-body div ul li:nth-child(4) a span{
+    margin-left:15px;
+}
+.acordeon-body div{
+    margin:10px;
+}
+/*************** arrow ******************/
+.down-arrow{
+    display: inline-block;
+    width:8px;
+    height:8px;
+    border:2px solid transparent;
+    border-right-color: #ddd;
+    border-bottom-color: #ddd;
+    transform: rotate(45deg);
+    margin-left: 10px;
+    position: relative;
+    top:-3px;
+    left: -5px;
+}
+.right-arrow{
+    display: inline-block;
+    width:8px;
+    height:8px;
+    border:2px solid transparent;
+    border-right-color: #ddd;
+    border-top-color: #ddd;
+    transform: rotate(45deg);
+    margin-left: 10px;
+    position: relative;
+    left: -5px;
+}
+/************** sub-acordeon *****************/
+.sub-acordeon-head{
+    padding:0;
+}
+.sub-acordeon-head p{
+    color:#ddd;
+}
+.sub-acordeon-body{
+    background: #35383D;
+    display:none;
+    /*height: 0;*/
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+.sub-acordeon-body ul li{
+    margin:10px 0 10px 10px;
+}
+.sub-acordeon-body ul li a img{
+    margin-left:40px;
+}
+.sub-acordeon-body ul li a span{
+    margin-left:15px;
+}
+/******************* show *******************/
+.show{
+    display: block;
+}
